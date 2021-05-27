@@ -42,8 +42,10 @@ zmk:
 		git clone https://github.com/zmkfirmware/zmk .; \
 		git remote add -ft macros okke-formsa https://github.com/okke-formsma/zmk; \
 		git remote add -ft cradio-v2 davidphilipbarr https://github.com/davidphilipbarr/zmk; \
+		git remote add -ft pr_tapdance kurtis-lew https://github.com/kurtis-lew/zmk; \
 		git merge okke-formsa/macros --no-edit; \
 		git merge davidphilipbarr/cradio-v2 --no-edit; \
+		git merge kurtis-lew/pr_tapdance --no-edit; \
 		west init -l app; \
 		west update;'
 

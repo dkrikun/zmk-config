@@ -17,6 +17,13 @@
 
   behaviors {
     #include "macros.dtsi"
+    td: tap_dance {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE";
+      #binding-cells = <0>;
+      tapping_term_ms = <1000>;
+      bindings = <&kp N1>, <&kp N2>;
+    };
   };
 
   keymap {
@@ -31,7 +38,7 @@
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                       &kp LSHFT     &mo HXY           &kp SPC       &kp RSHFT
+                                                       &kp LSHFT     &mo HXY           &kp SPC       &td
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
       >;
     };
