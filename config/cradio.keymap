@@ -51,6 +51,14 @@
       bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
     };
 
+    nav_num: nav_num {
+      compatible = "zmk,behavior-tap-dance";
+      label = "nav_num";
+      #binding-cells = <0>;
+      tapping_term_ms = <250>;
+      bindings = <&mo NAV>, <&mo NUM>;
+    };
+
   };
 
   keymap {
@@ -65,7 +73,7 @@
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                       &mo NAV       &shift_caps       &kp SPC       &mo SYM
+                                                       &nav_num      &shift_caps       &kp SPC       &mo SYM
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
       >;
     };
