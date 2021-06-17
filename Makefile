@@ -51,9 +51,10 @@ flash:
 
 zmk:
 	${docker_run} sh -c '\
-		git clone https://github.com/zmkfirmware/zmk .; \
-		git remote add -ft macros okke-formsa https://github.com/okke-formsma/zmk; \
-		git merge okke-formsa/macros --no-edit; \
+		git clone https://github.com/zmkfirmware/zmk . && \
+		git remote add okke-formsa https://github.com/okke-formsma/zmk \
+			-ft macros -ft mousekeys && \
+		git merge --no-edit okke-formsa/macros okke-formsa/mousekeys && \
 		west init -l app; \
 		west update'
 

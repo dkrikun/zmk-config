@@ -20,6 +20,7 @@ COMBO(enter, &kp ENTER, 17 18, BASE BASE_IOS)
 COMBO(esc, &kp ESC, 11 12, BASE BASE_IOS)
 COMBO(tab, &kp TAB, 1 2, BASE BASE_IOS)
 COMBO(num, &mo NUM, 30 31, BASE BASE_IOS)
+COMBO(mouse, &tog MOUSE, 12 22, BASE BASE_IOS MOUSE)
 
 COMBO(copy, &kp LC(C), 21 22, BASE)
 COMBO(copy_ios, &kp LG(C), 21 22, BASE_IOS)
